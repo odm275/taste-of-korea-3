@@ -33,24 +33,23 @@ MenuPage.propTypes = {
 
 export default MenuPage;
 
-// export const menuPageQuery = graphql`
-//   query MenuPage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       frontmatter {
-//         menuPdf {
-//           description
-//           pdf
-//         }
-//         section {
-//           heading
-//           description
-//           menuItems {
-//             name
-//             price
-//             description
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const menuPageQuery = graphql`
+  query MenuPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        menu_pdf {
+          description
+        }
+        section {
+          heading
+          description
+          menuItems {
+            name
+            price
+            description
+          }
+        }
+      }
+    }
+  }
+`;
