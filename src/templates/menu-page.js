@@ -16,7 +16,6 @@ export const MenuPageTemplate = ({ title, sections, menuPdf }) => (
 
 const MenuPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
   return (
     <Layout>
       <MenuPageTemplate
@@ -37,6 +36,7 @@ export const menuPageQuery = graphql`
   query MenuPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        bannerTitle
         menu_pdf {
           description
         }
