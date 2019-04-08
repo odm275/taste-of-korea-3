@@ -13,6 +13,8 @@ export const AboutPageTemplate = ({
 }) => {
   const PageContent = contentComponent || Content;
 
+  console.log(bannerTitle);
+
   return (
     <section className="section section--gradient">
       <Banner title={bannerTitle} />
